@@ -1,0 +1,35 @@
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+  background-color: rgb(255, 242, 226);
+}
+
+input {
+  width: 10em;
+  height: 2em;
+}
+
+.button {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  background-color: rgb(37, 240, 155);
+  color: white;
+  border: 2px solid white;
+  border-radius: 7px;
+}
+button:hover {
+  background-color: red;
+}
+
+#info {
+  visibility: hidden;
+}
+
+#mistake {
+  margin: 0;
+  color: red;
+  display: none;
+}
+

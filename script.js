@@ -15,6 +15,18 @@ function countDaysTill () {
   let days = document.getElementById('days');
   let lastDigit = daysTill % 10;
   let secondLastDigit = Math.floor((daysTill % 100) / 10);
+
+  let blankInput = () => {
+      if(inputDate.value == "") {
+        mistake.style.display = "block";
+        info.style.display = "none";
+      } else {
+        mistake.style.display = "none";
+        info.style.display = "block";
+      }
+    };
+     blankInput();
+
   if(secondLastDigit === 1) {
     days.textContent = "дней";
   } else {
@@ -25,18 +37,9 @@ function countDaysTill () {
         days.textContent = "день";
       } else {
       days.textContent = "дней";
-    }
-  }
-}
+     }
+   }
+ }
 }
 
 button.addEventListener('click', countDaysTill);
-
-inputDate.addEventListener("input",
-function() {
-    if(inputDate.value === "") {
-      mistake.style.display = "block";
-    } else {
-      mistake.style.display = "none";
-    }
-  });
